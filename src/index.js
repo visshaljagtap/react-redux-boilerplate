@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import combineReducers from './reducers';
-import App from './components/App'
+import AppRoutes from './components/Routes'
 
 export const store = createStore(
     combineReducers, 
@@ -15,7 +15,7 @@ export const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <AppRoutes />
     </Provider>,
     document.getElementById('root')
 );
